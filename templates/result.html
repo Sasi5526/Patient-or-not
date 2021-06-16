@@ -9,8 +9,9 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
+			results
 		</div>
-		<h2>Patient or Not patient</h2>
+		<h2>output</h2>
 		
 	</div>
 	</header>
@@ -20,7 +21,7 @@
 
 		
 	{% if prediction == 1%}
-	<h2 style="color:red;">Patient</h2>
+	<h2 style="color:red;">Spam</h2>
 	{% elif prediction == 0%}
 	<h2 style="color:blue;">Not a Patient(Healthy)</h2>
 	{% endif %}
