@@ -18,8 +18,8 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 	if request.method == 'POST':
-		message = request.form['Conversations']
-		data = [message]
+		Conversations = request.form['Conversations']
+		data = [mConversations]
 		vect = cv.transform(data).toarray()
 		my_prediction = clf.predict(vect)
 	return render_template('result.html',prediction = my_prediction)
