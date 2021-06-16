@@ -21,8 +21,8 @@ def predict():
 
 
 	if request.method == 'POST':
-		Conversation = request.form['Conversation']
-		data = [Conversation]
+		message = request.form['Conversations']
+		data = [message]
 		vect = cv.transform(data).toarray()
 		my_prediction = clf.predict(vect)
 	return render_template('result.html',prediction = my_prediction)
