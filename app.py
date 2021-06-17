@@ -19,7 +19,7 @@ def home():
 def predict():
 	if request.method == 'POST':
 		Conversations = request.form['Conversations']
-		data = [mConversations]
+		data = [Conversations]
 		vect = cv.transform(data).toarray()
 		my_prediction = clf.predict(vect)
 	return render_template('result.html',prediction = my_prediction)
