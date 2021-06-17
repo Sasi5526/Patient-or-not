@@ -59,13 +59,4 @@ print(f'Accuracy:{accuracy_score(y_valid, valid_preds)}')
 filename = 'nlp_model.pkl'
 pickle.dump(model, open(filename, 'wb'))
 
-
-#Naive Bayes Classifier
-from sklearn.naive_bayes import MultinomialNB
-#
-clf = MultinomialNB()
-clf.fit(X_train, y_train)
-clf.score(X_valid,y_valid)
-filename = 'nlp_model.pkl'
-pickle.dump(clf, open(filename, 'wb'))
     
