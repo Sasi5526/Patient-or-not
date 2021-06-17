@@ -8,6 +8,7 @@ import pickle
 # load the model from disk
 filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
+cv=pickle.load(open('tranform.pkl','rb'))
 
 app = Flask(__name__)
 
